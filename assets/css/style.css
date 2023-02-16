@@ -1,5 +1,5 @@
-body {
-    background: rgb(191, 248, 173);
+.ss {
+    box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
 }
 .img__box {
     display: block;
@@ -38,6 +38,10 @@ body {
     box-shadow: inset -20px -20px 21px 4px rgba(5, 252, 63, 0.48);
 }
 
+.column_content6 {
+    box-shadow: inset -10px -10px 25px -2px rgba(249, 61, 24, 0.829);
+}
+
 .shadow-point {
     animation: shadow 5s infinite alternate;
 }
@@ -50,3 +54,4 @@ body {
         box-shadow: inset -20px -20px 21px 4px rgba(5, 252, 63, 0.48);
     }
 }
+
