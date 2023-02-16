@@ -1,197 +1,112 @@
-@extends('layouts.app', ['pageSlug' => 'box-models'])
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg1">
 
-@section('content')
-
-    <div class="container-fluid">
-        <div class="card card__manuals">
-            <div class="card-body" style="color: #000;">
-                МОДЕЛЬ ШКАФА
-            </div>
-            <div class="bg1">
-                <!-- Case -->
-                <div class="container">
-
-                    <div class="row align-items-start first-con">
-                        <div class="col col-12 order-first">
-                            <div class="row">
-                                <div class="col column_content3">
-                                    1 
-                                </div>
-                                <div class="col column_content3">
-                                    2
-                                </div>
-                                <div class="col column_content3 column_content5">
-                                    3
-                                </div>
-                                <div class="col column_content3">
-                                    4
-                                </div>
-                                <div class="col column_content3">
-                                    5
-                                </div>
-                                <div class="col column_content3">
-                                    6
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col column_content3">
-                                    7 
-                                </div>
-                                <div class="col column_content3">
-                                    8
-                                </div>
-                                <div class="col column_content4">
-                                    <img class="img__box" src="/images/box-front.png" alt="">
-                                </div>
-                                <div class="col column_content3">
-                                    9
-                                </div>
-                                <div class="col column_content3">
-                                    10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-12 order-second">
-                            <div class="row">
-                                <div class="col column_content3">
-                                    11 
-                                </div>
-                                <div class="col column_content3">
-                                    12
-                                </div>
-                                <div class="col column_content3 column_content5">
-                                    13
-                                </div>
-                                <div class="col column_content3">
-                                    14
-                                </div>
-                                <div class="col column_content3">
-                                    15
-                                </div>
-                                <div class="col column_content3">
-                                    16
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col column_content3">
-                                    17 
-                                </div>
-                                <div class="col column_content3">
-                                    18
-                                </div>
-                                <div class="col column_content3 column_content5">
-                                    19
-                                </div>
-                                <div class="col column_content3">
-                                    20
-                                </div>
-                                <div class="col column_content3 column_content5">
-                                    21
-                                </div>
-                                <div class="col column_content3">
-                                    22
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-12 order-third">
-                            <div class="row">
-                                <div class="col column_content3">
-                                    23 
-                                </div>
-                                <div class="col column_content3">
-                                    24
-                                </div>
-                                <div class="col column_content3">
-                                    25
-                                </div>
-                                <div class="col column_content3">
-                                    26
-                                </div>
-                                <div class="col column_content3">
-                                    27
-                                </div>
-                                <div class="col column_content3">
-                                    28
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col column_content3">
-                                    29 
-                                </div>
-                                <div class="col column_content3">
-                                    30
-                                </div>
-                                <div class="col column_content3">
-                                    31
-                                </div>
-                                <div class="col column_content3">
-                                    32
-                                </div>
-                                <div class="col column_content3">
-                                    33
-                                </div>
-                                <div class="col column_content3">
-                                    34
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <!--<div class="row align-items-end">
-                        <div class="col column_content7">
-                           
-                        </div>
-                    </div>-->
-
-
-
-                     <!--<div class="col column_content4">
-                           
-                        </div>
-                        <div class="col  order-last">
-                            <div class="row">
-                                <div class="col column_content5">10
-                                    
-                                </div>
-                                <div class="col column_content5">11
-                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col column_content5">12
-                                    
-                                </div>
-                                <div class="col column_content5">13
-                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col column_content5">14
-                                    
-                                </div>
-                                <div class="col column_content5">15
-                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                
-                            </div>
-                        </div>
-                    </div>-->
-
-
-
-
-                </div>
+<!-- Case -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-3">
+            <h6 class="text-center text-white text-uppercase">Модель шкафа</h6> 
         </div>
     </div>
-@endsection
+    <div class="row align-items-start mt-3">
+        <div class="column_content">
+            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber unselectable" contenteditable="true" data-placeholder=""></div>
+        </div>
+        <div class="column_content">
+            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber" contenteditable="true" data-placeholder=""></div>
+        </div>
+        <div class="column_content">
+            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber" contenteditable="true" data-placeholder=""></div>
+        </div>
+    </div>
+    <div class="row align-items-start">
+        <div class="col order-first">
+            <div class="row">
+                <div class="col column_content3">4
+                    <div class="triangle_yellow"></div>
+                </div>
+                <div class="col column_content3">5
+                    <div class="triangle_green"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content3">6
+                    <div class="triangle_red"></div>
+                </div>
+                <div class="col column_content3">7
+                    <div class="triangle_gray"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content3">8
+                    <div class="triangle_yellow"></div>
+                </div>
+                <div class="col column_content3">9
+                    <div class="triangle_green"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content6"></div>
+            </div>
+        </div>
+        <div class="col column_content4">
+            <div class="mt-3 circle rotate"></div>
+            <div class="triangle rotate"></div>
+            <div class="square rotate"></div>
+        </div>
+        <div class="col  order-last">
+            <div class="row">
+                <div class="col column_content5">10
+                    <div class="triangle_yellow_right"></div>
+                </div>
+                <div class="col column_content5">11
+                    <div class="triangle_gray_right"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content5">12
+                    <div class="triangle_green_right"></div>
+                </div>
+                <div class="col column_content5">13
+                    <div class="triangle_red_right"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content5">14
+                    <div class="triangle_yellow_right"></div>
+                </div>
+                <div class="col column_content5">15
+                    <div class="triangle_gray_right"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col column_content6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col column_content7">
+            <div class="mt-1" id="setLog3"></div>
+            <div>
+                <ol class="listItems"></ol>
+            </div>
+        </div>
+    </div>
+</div>
 
-@section('js')
-    <script>
-        $(document).ready(function(){
+<!-- Section Scripts -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.marquee.min.js"></script>
+<script src="js/script.js"></script>
 
-        });
-    </script>
-@endsection
-
-
+</body>
+</html>
