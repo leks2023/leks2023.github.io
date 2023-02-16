@@ -2,13 +2,14 @@ body {
     background: silver;
 }
 
+
 .img__box {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.column_content3 {
+.column_content1 {
     position: relative;
     padding: 10px;
     max-width: 60px;
@@ -19,10 +20,9 @@ body {
     outline-offset: -7px;
     background-color: rgb(190, 188, 188);
     box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
-   
 }
 
-.column_content4 {
+.column_content2 {
     position: relative;
     padding: 10px;
     max-width: 120px;
@@ -34,23 +34,36 @@ body {
     background-color: rgb(131, 130, 130);
 }
 
-.column_content5 {
+.column_content3 {
     box-shadow: inset -15px -15px 21px 4px rgba(5, 252, 63, 0.48);
 }
 
-.column_content6 {
+.column_content4 {
     box-shadow: inset -10px -10px 25px -2px rgba(249, 61, 24, 0.829);
 }
 
-.shadow-point {
-    animation: shadow 1s infinite alternate;
+.shadow-point1 {
+    animation: shadow__green 1s infinite alternate;
 }
   
-@keyframes shadow {
+@keyframes shadow__green {
     from {
         box-shadow: inset -10px -10px 11px 2px rgba(165, 212, 176, 0.48);
     }
     to {
         box-shadow: inset -15px -15px 21px 4px rgba(5, 252, 63, 0.48);
+    }
+}
+
+.shadow-point2 {
+    animation: shadow__red 1s infinite alternate;
+}
+  
+@keyframes shadow__red {
+    from {
+        box-shadow: inset 0px 0px 0px 0px rgba(165, 212, 176, 0.48);
+    }
+    to {
+        box-shadow: inset -10px -10px 25px -2px rgba(249, 61, 24, 0.829);
     }
 }
