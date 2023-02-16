@@ -17,7 +17,7 @@ body {
     border-style: double;
     outline: thick double var(--color2);
     outline-offset: -7px;
-    background-color: rgb(146, 145, 145);
+    background-color: rgb(190, 188, 188);
     box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
    
 }
@@ -43,15 +43,14 @@ body {
 }
 
 .shadow-point {
-    animation: shadow 5s infinite alternate;
+    animation: shadow 1s infinite alternate;
 }
   
 @keyframes shadow {
     from {
-        box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
+        box-shadow: inset -10px -10px 11px 2px rgba(165, 212, 176, 0.48);
     }
     to {
-        box-shadow: inset -20px -20px 21px 4px rgba(5, 252, 63, 0.48);
+        box-shadow: inset -15px -15px 21px 4px rgba(5, 252, 63, 0.48);
     }
 }
-
