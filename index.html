@@ -1,112 +1,51 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body class="bg1">
 
-<!-- Case -->
-<div class="container">
-    <div class="row">
-        <div class="col-12 pt-3">
-            <h6 class="text-center text-white text-uppercase">Модель шкафа</h6> 
-        </div>
-    </div>
-    <div class="row align-items-start mt-3">
-        <div class="column_content">
-            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber unselectable" contenteditable="true" data-placeholder=""></div>
-        </div>
-        <div class="column_content">
-            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber" contenteditable="true" data-placeholder=""></div>
-        </div>
-        <div class="column_content">
-            <div title="Размер шрифта уменьшается по мере заполнения блока или нажатием Enter" class="rubber" contenteditable="true" data-placeholder=""></div>
-        </div>
-    </div>
-    <div class="row align-items-start">
-        <div class="col order-first">
-            <div class="row">
-                <div class="col column_content3">4
-                    <div class="triangle_yellow"></div>
-                </div>
-                <div class="col column_content3">5
-                    <div class="triangle_green"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content3">6
-                    <div class="triangle_red"></div>
-                </div>
-                <div class="col column_content3">7
-                    <div class="triangle_gray"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content3">8
-                    <div class="triangle_yellow"></div>
-                </div>
-                <div class="col column_content3">9
-                    <div class="triangle_green"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content6"></div>
-            </div>
-        </div>
-        <div class="col column_content4">
-            <div class="mt-3 circle rotate"></div>
-            <div class="triangle rotate"></div>
-            <div class="square rotate"></div>
-        </div>
-        <div class="col  order-last">
-            <div class="row">
-                <div class="col column_content5">10
-                    <div class="triangle_yellow_right"></div>
-                </div>
-                <div class="col column_content5">11
-                    <div class="triangle_gray_right"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content5">12
-                    <div class="triangle_green_right"></div>
-                </div>
-                <div class="col column_content5">13
-                    <div class="triangle_red_right"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content5">14
-                    <div class="triangle_yellow_right"></div>
-                </div>
-                <div class="col column_content5">15
-                    <div class="triangle_gray_right"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col column_content6"></div>
-            </div>
-        </div>
-    </div>
-    <div class="row align-items-end">
-        <div class="col column_content7">
-            <div class="mt-1" id="setLog3"></div>
-            <div>
-                <ol class="listItems"></ol>
-            </div>
-        </div>
-    </div>
-</div>
+.img__box {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
-<!-- Section Scripts -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="assets/js/jquery.marquee.min.js"></script>
-<script src="assets/js/app.js"></script>
+.column_content3 {
+    position: relative;
+    padding: 10px;
+    max-width: 60px;
+    height: 100px;
+    border: 4px var(--color2);
+    border-style: double;
+    outline: thick double var(--color2);
+    outline-offset: -7px;
+    background-color: rgb(190, 190, 190);
+    box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
+   
+}
 
-</body>
-</html>
+.column_content4 {
+    position: relative;
+    padding: 10px;
+    max-width: 120px;
+    height: 100px;
+    border: 4px var(--color2);
+    border-style: double;
+    outline: thick double var(--color2);
+    outline-offset: -7px;
+    background-color: rgb(190, 190, 190);
+    box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
+}
+
+.column_content5 {
+    box-shadow: inset -20px -20px 21px 4px rgba(5, 252, 63, 0.48);
+}
+
+.shadow-point {
+    animation: shadow 5s infinite alternate;
+}
+  
+@keyframes shadow {
+    from {
+        box-shadow: inset -10px -10px 11px 2px rgba(75, 73, 73, 0.48);
+    }
+    to {
+        box-shadow: inset -20px -20px 21px 4px rgba(5, 252, 63, 0.48);
+    }
+}
+
