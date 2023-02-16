@@ -1,4 +1,6 @@
-
+body {
+    background-color: silver;
+}
 .img__box {
     display: block;
     max-width: 100%;
