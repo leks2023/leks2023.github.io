@@ -397,70 +397,77 @@ body {
     width: 50%;
     color: #fff;
   }
-}    
+}  
+
+.ff {
+    display: flex;
+}
 </style>
-<div>
-<div class="canvas">  
-  <div class="legend">
-    <p class="title">Статусы оборудования</p>    
-    <ul class="caption-list">
-      <li class="caption-item">Не рабочее 8%</li>
-      <li class="caption-item">В ремонте 11%</li>
-      <li class="caption-item">В шкафу 11%</li>
-      <li class="caption-item">Оборудование на руках 14%</li>
-      <li class="caption-item">Свободное оборудование 11%</li>
-      <li class="caption-item">Сдан временно 5%</li>
-      <li class="caption-item">Ахо 40%</li>
-    </ul>
-  </div>
-  
-  <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-  </svg>
-</div>
-</div>
+
+<div class="ff"> 
+    <div>
+        <div class="canvas">  
+            <div class="legend">
+                <p class="title">Статусы оборудования</p>    
+                <ul class="caption-list">
+                <li class="caption-item">Не рабочее 8%</li>
+                <li class="caption-item">В ремонте 11%</li>
+                <li class="caption-item">В шкафу 11%</li>
+                <li class="caption-item">Оборудование на руках 14%</li>
+                <li class="caption-item">Свободное оборудование 11%</li>
+                <li class="caption-item">Сдан временно 5%</li>
+                <li class="caption-item">Ахо 40%</li>
+                </ul>
+            </div>
+        
+            <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+            </svg>
+        </div>
+    </div>
  
-<div>
-<ul class="upgrade-chart">
-  <li class="speed-30">Не рабочее 80</li>
-  <li class="speed-40">В ремонте 40</li>
-  <li class="speed-50">В шкафу 50</li>
-  <li class="speed-60 popular">Оборудование на руках 60</li>
-  <li class="speed-70">Свободное оборудование 20</li>
-  <li class="speed-80">Сдан временно 15</li>
-  <li class="speed-80">Ахо 25</li>
-</ul>
-<ul class="mph">
-  <li>Всего</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>-</li>
-  <li>290 шт</li>
-</ul>
-<div class="legend111">
-  <p class="title">Статусы оборудования</p>    
-  <ul class="legend">
-    <li class="caption-item1">Не рабочее 80</li>
-    <li class="caption-item2">В ремонте 40</li>
-    <li class="caption-item3">В шкафу 50</li>
-    <li class="caption-item4">Оборудование на руках 60</li>
-    <li class="caption-item5">Свободное оборудование 20</li>
-    <li class="caption-item6">Сдан временно 15</li>
-    <li class="caption-item7">Ахо 25</li>
-  </ul>
-</div>
-</div>    
+    <div>
+        <ul class="upgrade-chart">
+        <li class="speed-30">Не рабочее 80</li>
+        <li class="speed-40">В ремонте 40</li>
+        <li class="speed-50">В шкафу 50</li>
+        <li class="speed-60 popular">Оборудование на руках 60</li>
+        <li class="speed-70">Свободное оборудование 20</li>
+        <li class="speed-80">Сдан временно 15</li>
+        <li class="speed-80">Ахо 25</li>
+        </ul>
+        <ul class="mph">
+        <li>Всего</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>290 шт</li>
+        </ul>
+        <div class="legend111">
+            <p class="title">Статусы оборудования</p>    
+            <ul class="legend">
+                <li class="caption-item1">Не рабочее 80</li>
+                <li class="caption-item2">В ремонте 40</li>
+                <li class="caption-item3">В шкафу 50</li>
+                <li class="caption-item4">Оборудование на руках 60</li>
+                <li class="caption-item5">Свободное оборудование 20</li>
+                <li class="caption-item6">Сдан временно 15</li>
+                <li class="caption-item7">Ахо 25</li>
+            </ul>
+        </div>
+    </div>    
+</div> 
     
 <script>
 let captionsList = document.querySelectorAll('.caption-item');
