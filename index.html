@@ -210,5 +210,272 @@ captionsList.forEach(function (item, index) {
 });
 </script>
 
+<div>
+    <style>
+.upgrade-chart {
+  font: 0.9em/1.5 "Myriad Pro", sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0;
+  background: #dcdcdc;
+  /*background: linear-gradient(to right, #dcdcdc, #dcdcdc 45%, #aee9ff 45%, #aee9ff 60%, #00aeef 60%, #00aeef);*/
+  width: 500px;
+}
+.upgrade-chart li {
+  background-color: #004761;
+  color: transparent;
+  margin: 0.4em 0;
+  padding: 0.2em 1em;
+  overflow: hidden;
+  animation: bar-one 2.5s 1 forwards;
+  height: 21px;
+}
+.upgrade-chart li.popular {
+  background-color: #34fd52;
+}
+.upgrade-chart li.speed-30 {
+  animation-name: bar-one;
+  background-color: #ff6302;
+}
+.upgrade-chart li.speed-40 {
+  animation-name: bar-two;
+  background-color: #f8ab1c;
+}
+.upgrade-chart li.speed-50 {
+  animation-name: bar-three;
+  background-color: #34fd52;
+}
+.upgrade-chart li.speed-60 {
+  animation-name: bar-four;
+  background-color: #8a6bbb;
+}
+.upgrade-chart li.speed-70 {
+  animation-name: bar-five;
+  background-color: #b5b52f;
+}
+.upgrade-chart li.speed-80 {
+  animation-name: bar-six;
+  background-color: #22929c;
+}
+.upgrade-chart li.speed-50 {
+  animation-name: bar-seven;
+  background-color: #32338e;
+}
+
+.mph {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #717171;
+  overflow: hidden;
+  width: 500px;
+  color: #fff;
+  font: 0.8em/38px "Myriad Pro", sans-serif;
+  height: 34px;
+}
+.mph li {
+  float: left;
+  padding: 0 13px;
+  position: relative;
+}
+.mph li:first-child {
+  width: 100px;
+}
+.mph li:first-child:before {
+  content: "";
+}
+.mph li:before {
+  content: "|";
+  position: absolute;
+  overflow: hidden;
+  line-height: 1;
+  height: 8px;
+  left: 50%;
+}
+
+.legend {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  font: 0.8em/1.5 "Myriad Pro", sans-serif;
+}
+.legend li {
+  display: inline-block;
+  position: relative;
+  line-height: 26px;
+  margin-left: 1em;
+}
+.legend li:first-child {
+  margin-left: 0;
+}
+.caption-item1:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #ff6302;
+}
+.caption-item2:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #f8ab1c;
+}
+.caption-item3:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #34fd52;
+}
+.caption-item4:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #8a6bbb;
+}
+.caption-item5:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #b5b52f;
+}
+.caption-item6:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #22929c;
+}
+.caption-item7:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
+  background: #32338e;
+}
+.legend li.popular {
+  width: 250px;
+}
+.legend li.fish:before {
+  background: #dcdcdc;
+}
+.legend li.tube:before {
+  background: #aee9ff;
+}
+.legend li.ski:before {
+  background: #00aeef;
+}
+
+@keyframes bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35%;
+    color: #fff;
+  }
+}
+@keyframes bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+    color: #fff;
+  }
+}
+@keyframes bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    color: #fff;
+  }
+}
+@keyframes bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+    color: #fff;
+  }
+}
+@keyframes bar-five {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+    color: #fff;
+  }
+}
+@keyframes bar-six {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+    color: #fff;
+  }
+}
+@keyframes bar-seven {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    color: #fff;
+  }
+}
+</style>
+
+<ul class="upgrade-chart">
+  <li class="speed-30">Не рабочее 80</li>
+  <li class="speed-40">В ремонте 40</li>
+  <li class="speed-50">В шкафу 50</li>
+  <li class="speed-60 popular">Оборудование на руках 60</li>
+  <li class="speed-70">Свободное оборудование 20</li>
+  <li class="speed-80">Сдан временно 15</li>
+  <li class="speed-80">Ахо 25</li>
+</ul>
+<ul class="mph">
+  <li>Всего</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>-</li>
+  <li>290 шт</li>
+</ul>
+<div class="legend111">
+  <p class="title">Статусы оборудования</p>    
+  <ul class="legend">
+    <li class="caption-item1">Не рабочее 80</li>
+    <li class="caption-item2">В ремонте 40</li>
+    <li class="caption-item3">В шкафу 50</li>
+    <li class="caption-item4">Оборудование на руках 60</li>
+    <li class="caption-item5">Свободное оборудование 20</li>
+    <li class="caption-item6">Сдан временно 15</li>
+    <li class="caption-item7">Ахо 25</li>
+  </ul>
+</div>
+</div>
+    
 </body>
 </html>
