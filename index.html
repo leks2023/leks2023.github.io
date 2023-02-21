@@ -369,9 +369,12 @@ $('.count').each(function () {
     </div>
     
     
-    <div>
+   
         
-        <style>
+        
+
+<div>
+    <style>
     body {
   background-color: #a3acb7;
   font-family: 'Alegreya SC', serif;
@@ -415,8 +418,6 @@ $('.count').each(function () {
   color: #fff;
 }
 </style>
-
-<div>
     <div class="verticalChart">
     <div class="singleBar">
       <div class="bar">
@@ -481,22 +482,9 @@ $('.count').each(function () {
     
     
 </div> 
-
+</div> 
         
-<script>
-let captionsList = document.querySelectorAll('.caption-item');
-let unitsList = document.querySelectorAll('.unit');
 
-captionsList.forEach(function (item, index) {
-  item.addEventListener('mouseover', function () {
-     unitsList[index].classList.add('hovered');
-  });
-  
-  item.addEventListener('mouseout', function () {
-     unitsList[index].classList.remove('hovered');
-  });
-});
-</script>
 <script src="assets/js/jquery-3.6.0.min.js"></script>    
 </body>
 </html>
