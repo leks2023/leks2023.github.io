@@ -9,377 +9,490 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;1,700&family=IBM+Plex+Serif:ital,wght@1,500&family=Montserrat:wght@700&family=Roboto:ital,wght@0,400;1,400;1,700&family=Vollkorn+SC:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
-
-<div class="ff"> 
- 
-    
- <div>
- <style>
-body {
-  background-color: #a3acb7;
-  font-family: 'Alegreya SC', serif;
-}
-.wrap1 {
-  width: 50%;
-  margin: 0 auto;
-}
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-style: italic;
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.5em;
-  padding: .5em 0;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #dadada;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-ul li {
-  line-height: 2;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  font-size: .85em;
-  text-transform: uppercase;
-  clear: both;
-}
-ul li:before {
-  content: "\2023";
-  padding: 0 1em 0 0;
-}
-
-.bar {
-  background: #14d54e;
-  width: 0;
-  margin: .25em 0;
-  color: #000;
-  position: relative;
-  transition: width 3s, background .5s;
-  -webkit-transform: translate3d(0, 0, 0);
-  clear: both;
-}
-.bar:nth-of-type(2n) {
-  background: #29e54f;
-}
-.bar .label {
-  font-size: .85em;
-  font-style: italic;
-  padding: 1em;
-  background: #3d3d3d;
-  color: #fff;
-  line-height: 1.2;
-  width: 12em;
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-}
-.bar .label.light {
-  background: #575757;
-}
-
-.count {
-  position: absolute;
-  right: .25em;
-  top: 30%;
-  padding: .15em;
-  font-size: .95em;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-}
-</style>
-
-<div class="wrap1">
-    <h1>Статусы оборудования</h1>
-    <div class="holder">
-      <div class="bar cf" data-percent="85%">
-        <span class="label">Не рабочее</span>
-      </div>
-      <div class="bar cf" data-percent="75%">
-        <span class="label light">В ремонте</span>
-      </div>
-      <div class="bar cf" data-percent="65%">
-        <span class="label">В шкафу</span>
-      </div>
-      <div class="bar cf" data-percent="90%">
-        <span class="label light">Оборудование на руках</span>
-      </div>
-      <div class="bar cf" data-percent="90%">
-        <span class="label">Свободное оборудование</span>
-      </div>
-      <div class="bar cf" data-percent="80%">
-        <span class="label light">Сдан временно</span>
-      </div>
-      <div class="bar cf" data-percent="85%">
-        <span class="label light">АXO</span>
-      </div>
-    </div>
-</div>
-
-<script>
-setTimeout(function start (){
-  
-  $('.bar').each(function(i){  
-    var $bar = $(this);
-    $(this).append('<span class="count"></span>')
-    setTimeout(function(){
-      $bar.css('width', $bar.attr('data-percent'));      
-    }, i*100);
-  });
-
-$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).parent('.bar').attr('data-percent')
-    }, {
-        duration: 2000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now) +'шт');
-        }
-    });
-});
-
-}, 500)
-</script>
-</div>
-    
-    <div>
-        <style>
-    .wrap {
-  margin: 3em auto;
-  padding: 3em 0 0;
-  width: 600px;
-  position: relative;
-  overflow: hidden;
-}
-
-.barra {
-  display: inline-block;
-  margin-left: 20px;
-  cursor: pointer;
-}
-.barra.barra1 {
-  background: #89B800;
-  box-shadow: 1px -1px #7aa400, 2px -2px #7aa400, 3px -3px #7aa400, 4px -4px #7aa400, 5px -5px #7aa400, 6px -6px #7aa400, 7px -7px #7aa400, 8px -8px #7aa400, 9px -9px #7aa400, 10px -10px #7aa400;
-  height: 50px;
-  width: 30px;
-}
-.barra.barra2 {
-  background: #D54F2A;
-  box-shadow: 1px -1px #bd4625, 2px -2px #bd4625, 3px -3px #bd4625, 4px -4px #bd4625, 5px -5px #bd4625, 6px -6px #bd4625, 7px -7px #bd4625, 8px -8px #bd4625, 9px -9px #bd4625, 10px -10px #bd4625;
-  height: 200px;
-  width: 30px;
-}
-.barra.barra3 {
-  background: #DA9421;
-  box-shadow: 1px -1px #c2841d, 2px -2px #c2841d, 3px -3px #c2841d, 4px -4px #c2841d, 5px -5px #c2841d, 6px -6px #c2841d, 7px -7px #c2841d, 8px -8px #c2841d, 9px -9px #c2841d, 10px -10px #c2841d;
-  height: 150px;
-  width: 30px;
-}
-.barra.barra4 {
-  background: #2F1B08;
-  box-shadow: 1px -1px #2a1807, 2px -2px #2a1807, 3px -3px #2a1807, 4px -4px #2a1807, 5px -5px #2a1807, 6px -6px #2a1807, 7px -7px #2a1807, 8px -8px #2a1807, 9px -9px #2a1807, 10px -10px #2a1807;
-  height: 100px;
-  width: 30px;
-}
-.barra.barra5 {
-  background: #EEF4B2;
-  box-shadow: 1px -1px #d4d99e, 2px -2px #d4d99e, 3px -3px #d4d99e, 4px -4px #d4d99e, 5px -5px #d4d99e, 6px -6px #d4d99e, 7px -7px #d4d99e, 8px -8px #d4d99e, 9px -9px #d4d99e, 10px -10px #d4d99e;
-  height: 25px;
-  width: 30px;
-}
-
-.pointer {
-  position: absolute;
-  width: 100px;
-  height: 25px;
-  background: grey;
-  border-radius: 5px;
-  border: 1px solid grey;
-  color: white;
-  font-weight: bold;
-  font-family: Helvetica;
-  font-size: 10px;
-  text-align: center;
-  line-height: 25px;
-  display: none;
-}
-
-.pointer:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid grey;
-  bottom: -10px;
-  left: 10px;
-}
-</style>
-
-
-<div class="wrap">
-    <div class="barra barra1">
-    </div>
-    <div class="barra barra2">
-    </div>
-    <div class="barra barra3">
-    </div>
-    <div class="barra barra4">
-    </div>
-    <div class="barra barra5">
-    </div>
-    <div class="pointer">Height:
-    <span class="data-height"></span>
-    </div>
-  </div>
-
-
-<script>
-    $('.barra').each(function(i, el){
-  $(el).on({
-  mousemove: function(e){
-    $('.pointer').fadeIn(50).offset({
-      top: e.pageY - 45,
-      left: e.pageX -20
-    });
-    $('.data-height').text( $(el).height() );
-  },
-  mouseleave: function(){
-     $('.pointer').fadeOut(50);
-  }});
-});
-</script>
-
-<script src="jquery-3.6.0.min.js"></script>
-    </div>
-
-<div>     
 <style>
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 600px) {
-  .wrapper {
-    width: 100%;
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
   }
 }
 
-.graph {
+html,
+body {
+  margin: 0;
   padding: 0;
-  width: 100%;
-  float: left;
-  border-bottom: 1px solid #888;
+  
+  background-color: #fff;
 }
-.graph li {
-  position: relative;
+
+.canvas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+}
+
+.legendrr {
+  max-width: 250px;
+  margin-left: 30px;
+}
+
+.title {  
+  font-family: "Verdana", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #591d48;
+}
+
+.caption-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  border-top: 1px solid #888;
-  clear: both;
 }
 
-.equipment {
-  display: block;
-  padding: 1em;
+.caption-item {
   position: relative;
-  color: #222;
-  font-weight: bold;
+
+  margin: 20px 0;
+  padding-left: 30px;
+  
+  font-family: "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #591d48;  
+  cursor: pointer;
+}
+
+.caption-item:hover {
+  opacity: 0.8;
+}
+
+.caption-item::before {
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 20px;
+  height: 20px;
+  
+  border-radius: 8px;
+}
+
+.caption-item:nth-child(1)::before {
+  background-color: #ff6302;
+}
+
+.caption-item:nth-child(2)::before {
+  background-color: #f8ab1c;
+}
+
+.caption-item:nth-child(3)::before {
+  background-color: #1d8bca;
+}
+
+.caption-item:nth-child(4)::before {
+  background-color: #34fd52;
+}
+
+.caption-item:nth-child(5)::before {
+  background-color: #8a6bbb;
+}
+
+.caption-item:nth-child(6)::before {
+  background-color: #f7f74e;
+}
+
+.caption-item:nth-child(7)::before {
+  background-color: #afb9ba;
+}
+
+.chart {
+  min-width: 500px;
+}
+
+.unit {
+  fill: none;
+  stroke-width: 10;
+  cursor: pointer;
+  
+  animation-name: render;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  /*animation-direction: alternate;*/
+  transition-property: all; 
+  transition-duration: 1.5s;
+}
+
+.unit:hover,
+.hovered {
+  opacity: 0.8;
+  stroke-width: 12;
+}
+
+.unit:nth-child(1) {
+  stroke: #ff6302;
+  stroke-dasharray: 8 100;
+}
+
+.unit:nth-child(2) {
+  stroke: #f8ab1c;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -8;
+}
+
+.unit:nth-child(3) {
+  stroke: #1d8bca;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -19;
+}
+
+.unit:nth-child(4) {
+  stroke: #34fd52;
+  stroke-dasharray: 14 100;
+  stroke-dashoffset: -30;
+}
+
+.unit:nth-child(5) {
+  stroke: #8a6bbb;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -44;
+}
+
+.unit:nth-child(6) {
+  stroke: #f7f74e;
+  stroke-dasharray: 5 100;
+  stroke-dashoffset: -55;
+}
+
+.unit:nth-child(7) {
+  stroke: #afb9ba;
+  stroke-dasharray: 40 100;
+  stroke-dashoffset: -60;
+}
+    
+    
+.upgrade-chart {
+  font: 0.9em/1.5 "Myriad Pro", sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0;
+  background: #dcdcdc;
+  /*background: linear-gradient(to right, #dcdcdc, #dcdcdc 45%, #aee9ff 45%, #aee9ff 60%, #00aeef 60%, #00aeef);*/
+  width: 500px;
+}
+.upgrade-chart li {
+  background-color: #004761;
+  color: transparent;
+  margin: 0.4em 0;
+  padding: 0.2em 1em;
+  overflow: hidden;
+  animation: bar-one 2.5s 1 forwards;
+  height: 21px;
+}
+.upgrade-chart li.popular {
+  background-color: #34fd52;
+}
+.upgrade-chart li.speed-30 {
+  animation-name: bar-one;
+  background-color: #ff6302;
+}
+.upgrade-chart li.speed-40 {
+  animation-name: bar-two;
+  background-color: #f8ab1c;
+}
+.upgrade-chart li.speed-50 {
+  animation-name: bar-three;
+  background-color: #34fd52;
+}
+.upgrade-chart li.speed-60 {
+  animation-name: bar-four;
+  background-color: #8a6bbb;
+}
+.upgrade-chart li.speed-70 {
+  animation-name: bar-five;
+  background-color: #b5b52f;
+}
+.upgrade-chart li.speed-80 {
+  animation-name: bar-six;
+  background-color: #22929c;
+}
+.upgrade-chart li.speed-50 {
+  animation-name: bar-seven;
+  background-color: #32338e;
+}
+
+.mph {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #717171;
+  overflow: hidden;
+  width: 500px;
+  color: #fff;
+  font: 0.8em/38px "Myriad Pro", sans-serif;
+  height: 34px;
+}
+.mph li {
   float: left;
+  padding: 0 13px;
+  position: relative;
+}
+.mph li:first-child {
+  width: 100px;
+}
+.mph li:first-child:before {
+  content: "";
+}
+.mph li:before {
+  content: "|";
+  position: absolute;
+  overflow: hidden;
+  line-height: 1;
+  height: 8px;
+  left: 50%;
 }
 
-.total {
-  padding: 1em;
-  float: right;
+.legend {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  font: 0.8em/1.5 "Myriad Pro", sans-serif;
 }
-
-.notwork {
-  width: 40%;
+.legend li {
+  display: inline-block;
+  position: relative;
+  line-height: 26px;
+  margin-left: 1em;
+}
+.legend li:first-child {
+  margin-left: 0;
+}
+.caption-item1:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #ff6302;
 }
-
-.remont {
-  width: 28%;
+.caption-item2:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #f8ab1c;
 }
-
-.inbox {
-  width: 22%;
+.caption-item3:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #34fd52;
 }
-
-.inhands {
-  width: 80%;
+.caption-item4:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #8a6bbb;
 }
-
-.free {
-  width: 30%;
+.caption-item5:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #b5b52f;
 }
-
-.temporari {
-  width: 60%;
+.caption-item6:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #22929c;
 }
-
-.axo {
-  width: 70%;
+.caption-item7:before {
+  content: "";
+  float: left;
+  margin-right: 0.6em;
+  width: 22px;
+  height: 22px;
   background: #32338e;
 }
+.legend li.popular {
+  width: 250px;
+}
+.legend li.fish:before {
+  background: #dcdcdc;
+}
+.legend li.tube:before {
+  background: #aee9ff;
+}
+.legend li.ski:before {
+  background: #00aeef;
+}
+
+@keyframes bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35%;
+    color: #fff;
+  }
+}
+@keyframes bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+    color: #fff;
+  }
+}
+@keyframes bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    color: #fff;
+  }
+}
+@keyframes bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+    color: #fff;
+  }
+}
+@keyframes bar-five {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+    color: #fff;
+  }
+}
+@keyframes bar-six {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+    color: #fff;
+  }
+}
+@keyframes bar-seven {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    color: #fff;
+  }
+}  
+
+.ff {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.gg {
+    display: flex;
+    
+}
+
 </style>
 
-<div class="wrapper">
-<h1>Статусы оборудования</h1>
-<ul class="graph">
-<li>
-<span class="equipment notwork">Не рабочее</span>
-<span class="total">80</span>
-</li>
-<li>
-<span class="equipment remont">В ремонте</span>
-<span class="total">40</span>
-</li>
-<li>
-<span class="equipment inbox">В шкафу</span>
-<span class="total">50</span>
-</li>
-<li>
-<span class="equipment inhands">Оборудование на руках</span>
-<span class="total">80</span>
-</li>
-<li>
-<span class="equipment free">Свободное оборудование</span>
-<span class="total">10</span>
-</li>
-<li>
-<span class="equipment temporari">Сдан временно</span>
-<span class="total">60</span>
-</li>
-<li>
-<span class="equipment axo">АXO</span>
-<span class="total">70</span>
-</li>
-</ul>
-</div>
+<div class="ff"> 
+ 
+    <div class="jj">
+        <ul class="upgrade-chart">
+        <li class="speed-30">Не рабочее 80</li>
+        <li class="speed-40">В ремонте 40</li>
+        <li class="speed-50">В шкафу 50</li>
+        <li class="speed-60 popular">Оборудование на руках 60</li>
+        <li class="speed-70">Свободное оборудование 20</li>
+        <li class="speed-80">Сдан временно 15</li>
+        <li class="speed-80">Ахо 25</li>
+        </ul>
+        <ul class="mph">
+        <li>Всего</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>290 шт</li>
+        </ul>
+        <div class="legend111">
+            <p class="title">Статусы оборудования</p>    
+            <ul class="legend">
+                <li class="caption-item1">Не рабочее 80</li>
+                <li class="caption-item2">В ремонте 40</li>
+                <li class="caption-item3">В шкафу 50</li>
+                <li class="caption-item4">Оборудование на руках 60</li>
+                <li class="caption-item5">Свободное оборудование 20</li>
+                <li class="caption-item6">Сдан временно 15</li>
+                <li class="caption-item7">Ахо 25</li>
+            </ul>
+        </div>
+    </div> 
+    
+    <div class="gg">
+        <div class="canvas">  
+            <div class="legendrrr">
+                <p class="title">Статусы оборудования</p>    
+                <ul class="caption-list">
+                <li class="caption-item">Не рабочее 8%</li>
+                <li class="caption-item">В ремонте 11%</li>
+                <li class="caption-item">В шкафу 11%</li>
+                <li class="caption-item">Оборудование на руках 14%</li>
+                <li class="caption-item">Свободное оборудование 11%</li>
+                <li class="caption-item">Сдан временно 5%</li>
+                <li class="caption-item">Ахо 40%</li>
+                </ul>
+            </div>
         
+            <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+            </svg>
+        </div>
     </div>
-    
-    
-   
-        
-        
-
 
 </div> 
-        
+    
+<script>
+let captionsList = document.querySelectorAll('.caption-item');
+let unitsList = document.querySelectorAll('.unit');
 
-<script src="assets/js/jquery-3.6.0.min.js"></script>    
+captionsList.forEach(function (item, index) {
+  item.addEventListener('mouseover', function () {
+     unitsList[index].classList.add('hovered');
+  });
+  
+  item.addEventListener('mouseout', function () {
+     unitsList[index].classList.remove('hovered');
+  });
+});
+</script>
 </body>
 </html>
