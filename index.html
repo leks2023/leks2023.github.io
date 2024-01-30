@@ -1,498 +1,519 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;1,700&family=IBM+Plex+Serif:ital,wght@1,500&family=Montserrat:wght@700&family=Roboto:ital,wght@0,400;1,400;1,700&family=Vollkorn+SC:wght@900&display=swap" rel="stylesheet">
+    <title>STARTUP</title>
 </head>
 <body>
-<style>
-@keyframes render {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
+<div class="page">
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  
-  background-color: #fff;
-}
-
-.canvas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-}
-
-.legendrr {
-  max-width: 250px;
-  margin-left: 30px;
-}
-
-.title {  
-  font-family: "Verdana", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #591d48;
-}
-
-.caption-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.caption-item {
-  position: relative;
-
-  margin: 20px 0;
-  padding-left: 30px;
-  
-  font-family: "Verdana", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  color: #591d48;  
-  cursor: pointer;
-}
-
-.caption-item:hover {
-  opacity: 0.8;
-}
-
-.caption-item::before {
-  content: "";
-  
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  width: 20px;
-  height: 20px;
-  
-  border-radius: 8px;
-}
-
-.caption-item:nth-child(1)::before {
-  background-color: #ff6302;
-}
-
-.caption-item:nth-child(2)::before {
-  background-color: #f8ab1c;
-}
-
-.caption-item:nth-child(3)::before {
-  background-color: #1d8bca;
-}
-
-.caption-item:nth-child(4)::before {
-  background-color: #34fd52;
-}
-
-.caption-item:nth-child(5)::before {
-  background-color: #8a6bbb;
-}
-
-.caption-item:nth-child(6)::before {
-  background-color: #f7f74e;
-}
-
-.caption-item:nth-child(7)::before {
-  background-color: #afb9ba;
-}
-
-.chart {
-  min-width: 500px;
-}
-
-.unit {
-  fill: none;
-  stroke-width: 10;
-  cursor: pointer;
-  
-  animation-name: render;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  /*animation-direction: alternate;*/
-  transition-property: all; 
-  transition-duration: 1.5s;
-}
-
-.unit:hover,
-.hovered {
-  opacity: 0.8;
-  stroke-width: 12;
-}
-
-.unit:nth-child(1) {
-  stroke: #ff6302;
-  stroke-dasharray: 8 100;
-}
-
-.unit:nth-child(2) {
-  stroke: #f8ab1c;
-  stroke-dasharray: 11 100;
-  stroke-dashoffset: -8;
-}
-
-.unit:nth-child(3) {
-  stroke: #1d8bca;
-  stroke-dasharray: 11 100;
-  stroke-dashoffset: -19;
-}
-
-.unit:nth-child(4) {
-  stroke: #34fd52;
-  stroke-dasharray: 14 100;
-  stroke-dashoffset: -30;
-}
-
-.unit:nth-child(5) {
-  stroke: #8a6bbb;
-  stroke-dasharray: 11 100;
-  stroke-dashoffset: -44;
-}
-
-.unit:nth-child(6) {
-  stroke: #f7f74e;
-  stroke-dasharray: 5 100;
-  stroke-dashoffset: -55;
-}
-
-.unit:nth-child(7) {
-  stroke: #afb9ba;
-  stroke-dasharray: 40 100;
-  stroke-dashoffset: -60;
-}
-    
-    
-.upgrade-chart {
-  font: 0.9em/1.5 "Myriad Pro", sans-serif;
-  list-style: none;
-  margin: 0;
-  padding: 0.3em 0;
-  background: #dcdcdc;
-  /*background: linear-gradient(to right, #dcdcdc, #dcdcdc 45%, #aee9ff 45%, #aee9ff 60%, #00aeef 60%, #00aeef);*/
-  width: 500px;
-}
-.upgrade-chart li {
-  background-color: #004761;
-  color: transparent;
-  margin: 0.4em 0;
-  padding: 0.2em 1em;
-  overflow: hidden;
-  animation: bar-one 2.5s 1 forwards;
-  height: 21px;
-}
-.upgrade-chart li.popular {
-  background-color: #34fd52;
-}
-.upgrade-chart li.speed-30 {
-  animation-name: bar-one;
-  background-color: #ff6302;
-}
-.upgrade-chart li.speed-40 {
-  animation-name: bar-two;
-  background-color: #f8ab1c;
-}
-.upgrade-chart li.speed-50 {
-  animation-name: bar-three;
-  background-color: #34fd52;
-}
-.upgrade-chart li.speed-60 {
-  animation-name: bar-four;
-  background-color: #8a6bbb;
-}
-.upgrade-chart li.speed-70 {
-  animation-name: bar-five;
-  background-color: #b5b52f;
-}
-.upgrade-chart li.speed-80 {
-  animation-name: bar-six;
-  background-color: #22929c;
-}
-.upgrade-chart li.speed-50 {
-  animation-name: bar-seven;
-  background-color: #32338e;
-}
-
-.mph {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: #717171;
-  overflow: hidden;
-  width: 500px;
-  color: #fff;
-  font: 0.8em/38px "Myriad Pro", sans-serif;
-  height: 34px;
-}
-.mph li {
-  float: left;
-  padding: 0 13px;
-  position: relative;
-}
-.mph li:first-child {
-  width: 100px;
-}
-.mph li:first-child:before {
-  content: "";
-}
-.mph li:before {
-  content: "|";
-  position: absolute;
-  overflow: hidden;
-  line-height: 1;
-  height: 8px;
-  left: 50%;
-}
-
-.legend {
-  list-style: none;
-  margin: 1em 0;
-  padding: 0;
-  font: 0.8em/1.5 "Myriad Pro", sans-serif;
-}
-.legend li {
-  display: inline-block;
-  position: relative;
-  line-height: 26px;
-  margin-left: 1em;
-}
-.legend li:first-child {
-  margin-left: 0;
-}
-.caption-item1:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #ff6302;
-}
-.caption-item2:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #f8ab1c;
-}
-.caption-item3:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #34fd52;
-}
-.caption-item4:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #8a6bbb;
-}
-.caption-item5:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #b5b52f;
-}
-.caption-item6:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #22929c;
-}
-.caption-item7:before {
-  content: "";
-  float: left;
-  margin-right: 0.6em;
-  width: 22px;
-  height: 22px;
-  background: #32338e;
-}
-.legend li.popular {
-  width: 250px;
-}
-.legend li.fish:before {
-  background: #dcdcdc;
-}
-.legend li.tube:before {
-  background: #aee9ff;
-}
-.legend li.ski:before {
-  background: #00aeef;
-}
-
-@keyframes bar-one {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 35%;
-    color: #fff;
-  }
-}
-@keyframes bar-two {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 40%;
-    color: #fff;
-  }
-}
-@keyframes bar-three {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-    color: #fff;
-  }
-}
-@keyframes bar-four {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 60%;
-    color: #fff;
-  }
-}
-@keyframes bar-five {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 70%;
-    color: #fff;
-  }
-}
-@keyframes bar-six {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 80%;
-    color: #fff;
-  }
-}
-@keyframes bar-seven {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-    color: #fff;
-  }
-}  
-
-.ff {
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-}
-.gg {
-    display: flex;
-    
-}
-
-</style>
-
-<div class="ff"> 
- 
-    <div class="jj">
-        <ul class="upgrade-chart">
-        <li class="speed-30">Не рабочее 80</li>
-        <li class="speed-40">В ремонте 40</li>
-        <li class="speed-50">В шкафу 50</li>
-        <li class="speed-60 popular">Оборудование на руках 60</li>
-        <li class="speed-70">Свободное оборудование 20</li>
-        <li class="speed-80">Сдан временно 15</li>
-        <li class="speed-80">Ахо 25</li>
-        </ul>
-        <ul class="mph">
-        <li>Всего</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>290 шт</li>
-        </ul>
-        <div class="legend111">
-            <p class="title">Статусы оборудования</p>    
-            <ul class="legend">
-                <li class="caption-item1">Не рабочее 80</li>
-                <li class="caption-item2">В ремонте 40</li>
-                <li class="caption-item3">В шкафу 50</li>
-                <li class="caption-item4">Оборудование на руках 60</li>
-                <li class="caption-item5">Свободное оборудование 20</li>
-                <li class="caption-item6">Сдан временно 15</li>
-                <li class="caption-item7">Ахо 25</li>
-            </ul>
-        </div>
-    </div> 
-    
-    <div class="gg">
-        <div class="canvas">  
-            <div class="legendrrr">
-                <p class="title">Статусы оборудования</p>    
-                <ul class="caption-list">
-                <li class="caption-item">Не рабочее 8%</li>
-                <li class="caption-item">В ремонте 11%</li>
-                <li class="caption-item">В шкафу 11%</li>
-                <li class="caption-item">Оборудование на руках 14%</li>
-                <li class="caption-item">Свободное оборудование 11%</li>
-                <li class="caption-item">Сдан временно 5%</li>
-                <li class="caption-item">Ахо 40%</li>
-                </ul>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <h4 class="logo__text">Startup</h4>
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#intro">Home</a>
+                    <a class="nav__link" href="#" data-scroll="#services">Services</a>
+                    <a class="nav__link" href="#" data-scroll="#about">About</a>
+                    <a class="nav__link" href="#" data-scroll="#works">Works</a>
+                    <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+                    <a class="nav__link" href="#" data-scroll="#clients">Clients</a>
+                    <a class="nav__link" href="#" data-scroll="#contact">Contact</a>
+                </nav>
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__line">1</span>
+                    <span class="burger__line">2</span>
+                    <span class="burger__line">3</span>
+                    <span class="burger__line">4</span>
+                </button>
             </div>
-        
-            <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
-            </svg>
         </div>
-    </div>
+    </header>
 
-</div> 
-    
-<script>
-let captionsList = document.querySelectorAll('.caption-item');
-let unitsList = document.querySelectorAll('.unit');
+    <!-- Intro -->
+    <div class="intro" id="intro">
+        <div class="intro__slider" id="introSlider">
+            <div>
+                <img class="intro__slider-photo" src="assets/images/home-bg.jpg" alt="">
+            </div>
+            <div>
+                <img class="intro__slider-photo" src="assets/images/home-bg2.jpg" alt="">
+            </div>
+            <div>
+                <img class="intro__slider-photo" src="assets/images/home-bg3.jpg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__text">
+                    <h1 class="intro__title">WELCOME TO STARTUP</h1>
+                    <div class="intro__title-bottom">Your Favourite Creative Agency Template</div>
+                </div>        
+                <button class="btn btn--transparent " type="button">GET STARTED</button>
+                <div class="intro__slider-arrows">
+                    <button class="intro__slider-btn intro__slider-btn--prev" type="button" 
+                    id="introSliderPrev">
+                        Prev
+                    </button>
+                    <button class="intro__slider-btn intro__slider-btn--next" type="button" 
+                    id="introSliderNext">
+                        Next
+                    </button>
+                </div>
+            </div><!-- /.intro__inner -->
+        </div><!-- /.container -->
+    </div><!-- /.intro -->
 
-captionsList.forEach(function (item, index) {
-  item.addEventListener('mouseover', function () {
-     unitsList[index].classList.add('hovered');
-  });
-  
-  item.addEventListener('mouseout', function () {
-     unitsList[index].classList.remove('hovered');
-  });
-});
-</script>
+    <!-- Services -->
+    <section class="section" id="services" data-scrollspy="#services">
+        <div class="container"> 
+            <h2 class="section__title">SERVICES</h2>
+            <div class="section__line"></div>
+            <div class="section__title-bottom">   
+                <p class="section__title-bottom-text">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            </div>   
+            <div class="services">              
+                    <div class="services__item" data-aos="fade-right">
+                        <img class="service__icon img" src="assets/images/serv_icon_left.svg" alt="">
+                        <h4 class="services__title">CLEAN TYPOGRAPHY</h4>
+                        <div class="services__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                               Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. 
+                               Lorem ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__item" data-aos="fade-in" data-aos-delay="100">
+                        <img class="service__icon img" src="assets/images/serv_icon_center.svg" alt="">
+                        <h4 class="services__title">ROCK SOLID CODE</h4>
+                        <div class="services__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                               Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. 
+                               Lorem ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__item" data-aos="fade-left">
+                        <img class="service__icon img" src="assets/images/serv_icon_right.svg" alt="">
+                        <h4 class="services__title">EXPERT SUPPORT</h4>
+                        <div class="services__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                               Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. 
+                               Lorem ipsum.
+                            </p>
+                        </div>
+                    </div>
+            </div><!-- /.services -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- About Us -->
+    <section class="section section--bg_aboutus" id="about" data-scrollspy="#about">
+        <div class="container">
+            <h2 class="section__title">ABOUT US</h2>
+            <div class="section__line"></div>
+            <div class="section__title-bottom">
+                <p class="section__title-bottom-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            </div>
+            <div class="aboutus">   
+                <div class="aboutus__item">
+                    <div class="aboutus__text" data-aos="fade-right">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy 
+                            eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam 
+                            voluptua. At vero eos et accusam et justo dolores et ea rebum. 
+                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor 
+                            sit amet. Lorem ipsum dolor et dolore aliquyam erat. 
+                            Lorem ipsum dolor sit amet. Lorem ipsum eat.
+                        </p>
+                    </div> 
+                    <div class="aboutus__text" data-aos="fade-left">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy 
+                            eirtempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. 
+                            At vero eos eaccusam et justo dolores et ea rebum. Stet clita kasd 
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                            Lorem ipsum dolor et dolore aliquyam erat. Loreipsum dolor sit amet. 
+                            Lorem ipsum dolor et.
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutus__team">
+                    <div class="team__item" data-aos="fade-in" data-aos-delay="100">
+                        <img class="team__photo img" src="https://place-hold.it/260" alt="">
+                        <div class="team__name">
+                            MD. KHALIL UDDINS
+                        </div>
+                        <div class="team__prof">
+                            Head of Ideas
+                        </div>
+                    </div>
+                    <div class="team__item" data-aos="fade-in" data-aos-delay="200">
+                        <img class="team__photo img" src="https://place-hold.it/260" alt="">
+                        <div class="team__name">
+                            RUBEL MIDAH
+                        </div>
+                        <div class="team__prof">
+                            Lead WordPress Developer
+                        </div>
+                    </div>
+                    <div class="team__item" data-aos="fade-in" data-aos-delay="300">
+                        <img class="team__photo img" src="https://place-hold.it/260" alt="">
+                        <div class="team__name">
+                            SHAMIM MISAD
+                        </div>
+                        <div class="team__prof">
+                            Sr. Web Developer
+                        </div>
+                    </div>
+                    <div class="team__item" data-aos="fade-in" data-aos-delay="400">
+                        <img class="team__photo img" src="https://place-hold.it/260" alt="">
+                        <div class="team__name">
+                            JOHN DOES
+                        </div>
+                        <div class="team__prof">
+                            Front-end Developer
+                        </div>
+                    </div>
+                    <div class="team__logos">
+                        <ul class="team__logos-list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img class="team__logos-icon" src="assets/images/team/logo-fb.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img class="team__logos-icon" src="assets/images/team/logo-fb.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img class="team__logos-icon" src="assets/images/team/logo-fb.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img class="team__logos-icon" src="assets/images/team/logo-fb.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.clients__logos -->
+                </div><!-- /.aboutus__team -->
+            </div><!-- /.aboutus -->
+        </div><!-- /.container -->
+    </div><!-- /.section -->
+
+    <!-- Latest Works -->
+    <section class="section section--works" id="works" data-scrollspy="#works">
+        <div class="container">  
+            <h2 class="section__title">LATEST WORKS</h2>  
+            <div class="section__line"></div>
+            <div class="section__title-bottom"> 
+                    <a class="works__link" href="#">All</a>
+                    <a class="works__link" href="#">Branding</a>
+                    <a class="works__link" href="#">Design</a>
+                    <a class="works__link" href="#">Development</a>
+                    <a class="works__link" href="#">Strategy</a> 
+            </div>
+            <div class="works">
+                <div class="works__view">
+                    <h4 class="view__title">Hair Dresser</h4>
+                    <div class="view__text">
+                        <p>Branding</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn--black" type="button">VIEW
+                        </button>
+                    </div>
+                </div>
+                <div class="works__item">
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="100">
+                        <img class="works__icon img" src="assets/images/works/works-1.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="200">
+                        <img class="works__icon img" src="assets/images/works/works-2.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="300">
+                        <img class="works__icon img" src="assets/images/works/works-3.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="100">
+                        <img class="works__icon img" src="assets/images/works/works-4.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="200">
+                        <img class="works__icon img" src="assets/images/works/works-5.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="300">
+                        <img class="works__icon img" src="assets/images/works/works-6.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="100">
+                        <img class="works__icon img" src="assets/images/works/works-7.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="200">
+                        <img class="works__icon img" src="assets/images/works/works-8.jpg" alt="">
+                    </div>
+                    <div class="works__item-content" data-aos="flip-left" data-aos-delay="300">
+                        <img class="works__icon img" src="assets/images/works/works-9.jpg" alt="">
+                    </div>
+                </div>                  
+            </div><!-- /.works -->
+        </div><!-- /.container -->
+        <div class="works__our">
+            <div class="works__our-item">
+                <div class="works__item-text">
+                    Do you like OUR WORK so far?<br>Let's talk about YOUR PROJECT!  
+               </div>
+               <div class="works__item-button">
+                   <button class="btn btn--transparent" type="button">GET IN TOUCH</button>
+               </div>  
+            </div>            
+        </div><!-- /.works_our -->
+    </section><!-- / .latest_works -->
+
+    <!-- Recent blog posts -->
+    <section class="section" id="blog" data-scrollspy="#blog">
+        <div class="container"> 
+            <h2 class="section__title">RECENT BLOG POSTS</h2>
+            <div class="section__line"></div> 
+            <div class="section__title-bottom">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p> 
+            </div>    
+            <div class="blog" data-aos="fade-right" data-aos-delay="100">                              
+                <div class="blog__img">
+                    <img class="img" src="assets/images/blog/blog-1.jpg" alt="">
+                </div>  
+                <div class="blog__item">          
+                    <div class="blog__item-content">
+                        <div class="blog__item-square">
+                            <p>18 OCT</p> 
+                        </div>         
+                        <div class="blog__item-text">
+                            <a href="#">STARTUP IDEAS NEEDS TO BE FUNDED</a>
+                            <div class="blog__item-title">
+                                By <span>Khalil</span> Uddin in <span>Development</span>
+                            </div>
+                        </div>
+                        <div class="blog__item-text-bottom">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                                teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+                                accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata 
+                                sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, 
+                                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore 
+                                aliquyam erat, sed diam 
+                            </p>
+                        </div>
+                        <div class="blog__item-link">
+                            <a class="works__link" href="#">READ MORE</a>
+                        </div>            
+                    </div>
+                </div>       
+            </div>
+            <div class="hr"></div>
+            <div class="blog" data-aos="fade-left" data-aos-delay="200">                              
+                <div class="blog__img">
+                    <img class="img" src="assets/images/blog/blog-2.jpg" alt="">
+                </div>  
+                <div class="blog__item">          
+                    <div class="blog__item-content">
+                        <div class="blog__item-square">
+                            <p>18 OCT</p> 
+                        </div>         
+                        <div class="blog__item-text">
+                            <a href="#">USER INTERFACE DESIGNING ELEMENTS</a>
+                            <div class="blog__item-title">
+                                By <span>Khalil</span> Uddin in <span>Development</span>
+                            </div>
+                        </div>
+                        <div class="blog__item-text-bottom">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                                teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+                                accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata 
+                                sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, 
+                                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore 
+                                aliquyam erat, sed diam 
+                            </p>
+                        </div>
+                        <div class="blog__item-link">
+                            <a class="works__link" href="#">READ MORE</a>
+                        </div>            
+                    </div>
+                </div>       
+            </div><!-- /.blog -->
+        </div><!-- /.container -->
+    </section><!-- / .recent blog posts -->
+
+    <!-- Clients -->
+    <div class="clients section" id="clients" data-scrollspy="#clients">
+        <div class="container">
+            <div class="clients__item">
+                <div class="clients__item-logos">
+                    <ul class="clients__list">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="clients__list-logo img" data-aos="fade-right" 
+                                data-aos-delay="100" data-aos-anchor=".clients__item"
+                                src="assets/images/logos/deorham.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="clients__list-logo img" data-aos="fade-right" 
+                                data-aos-delay="150" data-aos-anchor=".clients__item"
+                                src="assets/images/logos/ratings.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="clients__list-logo img" data-aos="fade-right" 
+                                data-aos-delay="200" data-aos-anchor=".clients__item"
+                                src="assets/images/logos/malikmedia.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="clients__list-logo img" data-aos="fade-right" 
+                                data-aos-delay="250" data-aos-anchor=".clients__item"
+                                src="assets/images/logos/bcause.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="clients__list-logo img" data-aos="fade-right" 
+                                data-aos-delay="300" data-aos-anchor=".clients__item"
+                                src="assets/images/logos/wompiby.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clients__item-text">
+                    "Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                </div>
+                <div class="clients__item-google">
+                    John Does, Google Inc.
+                </div>
+                <div class="clients__item-dots">
+
+                </div>
+            </div><!-- clients__items -->
+        </div><!-- container -->
+    </div><!-- clients -->
+
+    <!-- Get in touch --> 
+    <section class="section" id="contact" data-scrollspy="#contact">
+        <div class="container">
+            <h2 class="section__title">GET IN TOUCH</h2>
+            <div class="section__line"></div> 
+            <div class="section__title-bottom">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p> 
+            </div>
+            <div class="get">
+                <div class="get__text">
+                    <div class="get__text-item">
+                        <div class="get__text-head">
+                            <img class="get__text-img" src="assets/images/icon/map-marker.svg" alt="">
+                            <p>ADDRESS</p> 
+                        </div>
+                        <div class="get__text-text">
+                            <p>312, 7th Ave, New York<br>NY 101200, United States of America</p> 
+                        </div>
+                    </div>
+                    <div class="get__text-item">
+                        <div class="get__text-head"> 
+                            <img class="get__text-img" src="assets/images/icon/phone.svg" alt="">
+                            <p>HOTLINE (24X7)</p>   
+                        </div>      
+                        <div class="get__text-text">
+                            <a href="tel:+987412512543">+987412512543</a><br>
+                            <a href="tel:+987412512345">+987412512345</a>
+                        </div>
+                    </div>
+                    <div class="get__text-item">
+                        <div class="get__text-head">
+                            <img class="get__text-img" src="assets/images/icon/e-mail.svg" alt="">
+                            <p>E-MAIL</p> 
+                        </div>
+                        <div class="get__text-text">
+                            <a href="mailto:shapethemes@gmail.com">shapedthemes@gmail.com</a>
+                            <a href="mailto:khalilkodes@gmail.com">khalilkodes@gmail.com</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="get__form">
+                    <form class="form" action="/" method="post">
+                        <div class="form__group">
+                            <input class="input input--user" type="text"
+                            placeholder = "YOUR NAME">
+                            <input class="input input--email" type="email"
+                            placeholder = "YOUR E-MAIL">
+                            <input class="input input--subject" type="text"
+                            placeholder = "YOUR SUBJECT">
+                            <input class="input input--company" type="text"
+                            placeholder = "COMPANY NAME">
+                           
+                            <textarea placeholder="WRITE YOUR MESSAGE"></textarea>
+                        </div>
+                        <div class="get__form-but">
+                            <button class="btn__send" type="submit">SEND MESSAGE</button>
+                        <div class="btn__info">
+                            <span>*</span> We’ll contact you as as possible. We don’t reply on Monday.
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- container -->
+    </section><!-- get in touch -->
+
+    <!-- Footer --> 
+    <div class="section section--footer">
+        <div class="container">
+          <footer class="footer">
+              <div class="footer__list">
+                <ul class="footer__list-icon">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="footer__list-logo img" src="assets/images/footer/foot_icon-1.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="footer__list-logo img" src="assets/images/footer/foot_icon-2.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="footer__list-logo img" src="assets/images/footer/foot_icon-3.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="footer__list-logo img" src="assets/images/footer/foot_icon-4.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+              </div>
+              <div class="footer__bottom">
+                <div class="footer__line"></div>
+                <p>© 2022 STARTUP, DESIGNED BY SHAPETHEMES</p> 
+              </div>
+          </footer>
+        </div><!-- container -->
+    </div><!-- footer -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</div>
 </body>
 </html>
